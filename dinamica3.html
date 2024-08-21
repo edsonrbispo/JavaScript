@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>Dinamicas do Jenga</title>
+  <style>
+    body {
+      padding: 24px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Algoritmos em Javascript</h1>
+   <p>Crie um programa que solicite uma nota ao usuário e exiba uma mensagem dizendo se ele passou (nota maior ou igual a 60) ou não passou.</p>
+  <hr>
+  <script>
+    /*Pedir a nota ao usuário*/
+      let nota = parseInt(prompt("Qual foi sua nota?"))
+
+      /*Verificar se a nota é maior ou igual a 60*/
+      if (nota >= 60) {
+          document.write(`Parabéns você foi aprovado com a nota ${nota}.`)
+      } else {
+          document.write(`Infelizmente você não foi aprovado ficou com a nota ${nota}.`)
+      }
+  </script>
+</body>
+
+</html>

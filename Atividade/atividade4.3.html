@@ -1,0 +1,67 @@
+<html>
+
+<head>
+  <title>Atividade de JavaScript</title>
+</head>
+
+<body>
+  <p id="boxresultado">
+  <P><label for="numeroinicial3">digite o numero inicial:</label></P>
+  <input type="number" id="numeroinicial3" name="numeroinicial3">
+  </p>
+  <p>
+    <label for="numerofinal3">digite o numero final:</label>
+    <input type="number" id="numerofinal3" name="numerofinal3">
+
+  </p>
+  <P>
+    <button onclick="Maior()">enviar</button>
+  <div class="result">
+    <p id="resultado3"></p>
+  </div>
+  </P>
+  </div>
+
+  <script>
+    function criarMultiplos(x, n) {
+      x = parseInt(x);
+      n = parseInt(n);
+      const multiplos = []
+      for (let i = x; i <= n; i += x) {
+        multiplos.push(i);
+      }
+      return multiplos;
+    }
+
+    function elevarAoQuadrado(arr) {
+      return arr.map(numero => numero * numero);
+
+    }
+    function gerarAoQuadrado() {
+      let x = document.getElementById('numeroinicialquadrado').value;
+      let n = document.getElementById('numerofinalquadrado').value;
+      let resultados2 =
+        document.getElementById('resultado2');
+      const resultados = criarMultiplos(x, n);
+      const quadrados = elevarAoQuadrado(resultados);
+      resultado2.textContent = quadrados.join(', ');
+    }
+    function contarMaioresQue20(arr){
+      return arr.filter(numero => numero > 20).length;
+    }
+    function Maior(){
+      let x = document.getElementById('numeroinicial3').value;
+      let n = document.getElementById('numerofinal3').value;
+      let resultado3 = document.getElementById('resultado3');
+
+      const resultados = criarMultiplos(x,n);
+      const quadrados = elevarAoQuadrado(resultados);
+      const maioresQue20 = contarMaioresQue20(quadrados);
+      resultado3.textContent = maioresQue20;
+    }
+
+
+  </script>
+</body>
+
+</html>

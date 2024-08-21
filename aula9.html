@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aula de JavaScript</title>
+  </head>
+  <body>
+    <script>
+      let pessoa = {
+        nome : "Edson Rodrigues",
+        idade : 29,
+        profissao:"Desenvolvedor",
+        salario : 2000
+      }
+
+      //Acessando dados de um objeto
+      console.log(pessoa);
+      console.log(pessoa.nome, pessoa.idade);
+      console.log(pessoa['salario']);
+     
+      //Modificando dados de uma propriedade
+      pessoa.idade = 30;
+      console.log(pessoa);
+
+      //Adicionar um nova propriedade
+      pessoa.genero = "Masculino";
+      console.log(pessoa);
+
+      //Remover propriedade
+      delete pessoa.salario;
+      console.log(pessoa);
+
+      //Métodos de um objeto
+      let carro = {
+        marca : "Toyota",
+        modelo : "Corolla",
+        ano : 2020,
+        ligar : function(){
+           console.log(`O carro ${this.marca} está ligado`);
+        }
+      }
+
+      carro.ligar();
+
+      //Atividade
+
+      
+      
+    </script>
+  </body>
+</html>

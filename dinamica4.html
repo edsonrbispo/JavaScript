@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Dinamicas do Jenga</title>
+  
+</head>
+
+<body>
+  <h1>Algoritmos em Javascript</h1>
+   <p>Saber se é maior ou menor de Idade</p>
+  <hr>
+
+
+  <script>
+    let idade = parseInt(prompt('Informe sua idade'));
+
+    if (!isNaN(idade)){
+      if (idade >= 18){
+        document.write (`Você tem ${idade} anos e é maior de idade`);
+      }
+      else {
+        document.write (`Você tem ${idade} anos e é menor de idade`);
+      }
+    }
+    else {
+      document.write (`${idade} não é um número, aperte f5 e escreva sua idade novamente`);
+    }
+  </script>
+</body>
+
+</html>

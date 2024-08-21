@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+        #resultado {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Simples</h1>
+        <input type="number" id="numero1" placeholder="Número 1">
+        <input type="number" id="numero2" placeholder="Número 2">
+        <br>
+        <button id="adicionarBotao">Somar</button>
+        <button id="subtrairBotao">Subtrair</button>
+        <button id="multiplicarBotao">Multiplicar</button>
+        <button id="dividirBotao">Dividir</button>
+        <button id="limparBotao">Limpar</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const numero1 = document.getElementById('numero1');
+          const numero2 = document.getElementById('numero2');
+          const resultado = document.getElementById('resultado');
+
+          const adicionarBotao = document.getElementById('adicionarBotao');
+          const subtrairBotao = document.getElementById('subtrairBotao');
+          const multiplicarBotao = document.getElementById('multiplicarBotao');
+          const dividirBotao = document.getElementById('dividirBotao');
+          const limparBotao = document.getElementById('limparBotao');
+
+          adicionarBotao.addEventListener('click', function () {
+            const valor1 = parseFloat(numero1.value);
+            const valor2 = parseFloat(numero2.value);
+            resultado.textContent = `Resultado: ${valor1 + valor2}`;
+          });
+
+          subtrairBotao.addEventListener('click', function () {
+            const valor1 = parseFloat(numero1.value);
+            const valor2 = parseFloat(numero2.value);
+            resultado.textContent = `Resultado: ${valor1 - valor2}`;
+          });
+
+          multiplicarBotao.addEventListener('click', function () {
+            const valor1 = parseFloat(numero1.value);
+            const valor2 = parseFloat(numero2.value);
+            resultado.textContent = `Resultado: ${valor1 * valor2}`;
+          });
+
+          dividirBotao.addEventListener('click', function () {
+            const valor1 = parseFloat(numero1.value);
+            const valor2 = parseFloat(numero2.value);
+            if (valor2 !== 0) {
+              resultado.textContent = `Resultado: ${valor1 / valor2}`;
+            } else {
+              resultado.textContent = 'Erro: Divisão por zero!';
+            }
+          });
+
+          limparBotao.addEventListener('click', function () {
+            numero1.value = '';
+            numero2.value = '';
+            resultado.textContent = '';
+          });
+        });
+
+    </script>
+</body>
+</html>

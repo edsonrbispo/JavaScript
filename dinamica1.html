@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>Dinamicas do Jenga</title>
+</head>
+
+<body>
+   <p>Crie um programa que solicita ao usuário um número e conta quantos números pares existem de 1 até esse número</p>
+  <hr>
+  <script>
+ var num = Number(prompt('me diga um numero:'))
+ var soma=0;
+ for(var cont=1;cont <=num;cont++){
+  if(cont %2 == 0){
+    soma++;
+  }
+ }
+  if(soma >0){
+    document.write(`temos ${soma} numeros pares`)
+  }else{
+    document.write('nao tem')
+  }
+  </script>
+
+
+</body>
+
+</html>
